@@ -215,26 +215,24 @@ router.put('/:id', (req, res) => {
 
 router.delete('/:id', (req, res) => {
   // delete one product by its `id` value
-  Product.destroy({
-    where: {
-      id: req.params.id,
-    },
-  }).then((product) => {
-    // find all associated tags from ProductTag
-    return ProductTag.findAll({ where: { product_id: req.params.id } });
-  }).then((productTags) => {
+  var productTagsToRemove = null;
+
+  // find all associated tags from ProductTag
+  ProductTag.findAll({ where: { product_id: req.params.id } })
+  .then((productTags) => {
 
     // remove associated product tags
-    const productTagsToRemove = productTags
+    productTagsToRemove = productTags
       .map(pt => pt.id);
 
     console.log("productTags " + JSON.stringify(productTags));
     console.log("productTagsToRemove " + JSON.stringify(productTagsToRemove));
 
-    // run both actions
-    return Promise.all([
-      ProductTag.destroy({ where: { id: productTagsToRemove } }),
-    ]);
+    return Product.destroy({where: {id: req.params.id}});
+  })
+  .then((product) => {
+    // delete productTags
+    return ProductTag.destroy({ where: { id: productTagsToRemove } });
   })
   .then((updatedProductTags) => res.json(updatedProductTags))
   .catch((err) => {
