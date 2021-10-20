@@ -7,9 +7,9 @@ router.get('/', async (req, res) => {
   // find all categories
   // be sure to include its associated Products
 
-const categories = await Category.findAll();
+  const categories = await Category.findAll();
 
-res.json(categories);
+  res.json(categories);
 });
 
 router.get('/:id', async (req, res) => {
@@ -17,32 +17,31 @@ router.get('/:id', async (req, res) => {
   // be sure to include its associated Products
 
   const category = await Category.findByPk( req.params.id );
+  res.json(category);
 });
 
 router.post('/', async (req, res) => {
   // create a new category
 
-  const category = await Category.create( req.body );
+  const category = await Category.create({id: req.params.id, category_name: req.body.category_name});
+  res.json(category);
 });
 
 router.put('/:id', async (req, res) => {
   // update a category by its `id` value
 
-  const category = await Category.belongsTo( req.body );
+  const category = await Category.findByPk( req.params.id );
+  category.category_name = req.body.category_name;
 
-  {
-    // Gets the books based on the isbn given in the request parameter
-    
-    where: {
-      id: req.params.id,
-    },
-  } );
-  
+  const result = await category.save();
+  res.json(result);
 });
 
 router.delete('/:id', async (req, res) => {
   // delete a category by its `id` value
-  Category.destroy();
+  const category = await Category.findByPk( req.params.id );
+  const result = await category.destroy();
+  res.json(result);
 });
 
 module.exports = router;
