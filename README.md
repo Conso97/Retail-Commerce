@@ -24,8 +24,28 @@ In this activity I learnt:
 * How to use environment variables to store sensitive data like  MySQL username, password, and database name.
 
 
+# Website
 
-# Video Demo 
+https://conso97.github.io/Retail-Commerce/
+
+# Walkthrough Video 
+
+https://drive.google.com/file/d/1kqqN4hd3-goD49hCPvyzTuRTE9qCKNeo/view 
+
+<img id="styledImage"
+    src="RetailCom.jpg" width="70%" height="70%"
+    alt="Retail Commerce"
+  />
+
+<img id="styledImage"
+    src="RetailCommerce.jpg" width="70%" height="70%"
+    alt="Retail Commerce"
+  />
+
+# Contact 
+
+* Name: Consolata Njeri
+* Email: Conso4u@gmail.com
 
 
 
