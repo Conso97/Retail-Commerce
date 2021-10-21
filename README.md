@@ -38,8 +38,8 @@ https://drive.google.com/file/d/1kqqN4hd3-goD49hCPvyzTuRTE9qCKNeo/view
   />
 
 <img id="styledImage"
-    src="RetailCommerce.jpg" width="70%" height="70%"
-    alt="Retail Commerce"
+    src="models/RetailCommerce.jpg" width="70%" height="70%"
+    alt="models/Retail Commerce"
   />
 
 # Contact 
