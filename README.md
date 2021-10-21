@@ -24,10 +24,6 @@ In this activity I learnt:
 * How to use environment variables to store sensitive data like  MySQL username, password, and database name.
 
 
-# Website
-
-https://conso97.github.io/Retail-Commerce/
-
 # Walkthrough Video 
 
 https://drive.google.com/file/d/1kqqN4hd3-goD49hCPvyzTuRTE9qCKNeo/view 
