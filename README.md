@@ -26,7 +26,7 @@ In this activity I learnt:
 
 # Walkthrough Video 
 
-https://drive.google.com/file/d/1kqqN4hd3-goD49hCPvyzTuRTE9qCKNeo/view 
+https://drive.google.com/file/d/107bRKISDHP-sdUTC33sQkzmeulCZvNtT/view
 
 <img id="styledImage"
     src="models/RetailCom.jpg" width="70%" height="70%"
